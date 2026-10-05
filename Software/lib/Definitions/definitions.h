@@ -6,8 +6,8 @@
 #include "config.h"
 
 /* Attack */
-#define ATTACK_SLOW_SPEED (ROBOT_1 ? 40.0f : 30.0f)
-#define ATTACK_FAST_SPEED (ROBOT_1 ? 40.0f : 30.0f)
+#define ATTACK_SLOW_SPEED (ROBOT_1 ? 45.0f : 30.0f)
+#define ATTACK_FAST_SPEED (ROBOT_1 ? 45.0f : 30.0f)
 #define ATTACK_CLOSE_DISTANCE (ROBOT_1 ? 30.0f : 30.0f) // DON'T CHANGE THIS
 #define ATTACK_SURGE_DISTANCE 7.0f
 #define ATTACK_SURGE_ANGLE 8.0f
@@ -15,9 +15,9 @@
 
 /* Defend */
 #define DEFEND_SURGE_SPEED 65.0f
-#define DEFEND_GOAL_DISTANCE (ROBOT_1 ? 20.0f : 25.0f)
-#define DEFEND_SURGE_DISTANCE (ROBOT_1 ? 25.0f : 30.0f)
-#define DEFEND_BALL_DISTANCE (ROBOT_1 ? 19.0f : 15.0f)
+#define DEFEND_GOAL_DISTANCE (ROBOT_1 ? 20.0f : 30.0f)
+#define DEFEND_SURGE_DISTANCE (ROBOT_1 ? 25.0f : 35.0f)
+#define DEFEND_BALL_DISTANCE (ROBOT_1 ? 19.0f : 17.5f)
 
 /* PIDs */
 // Defender: lower absoluteMax if overshooting big differences (vertical/horizontal)
@@ -38,7 +38,7 @@
 #define ATTACK_GOAL_TRACK_MAX (ROBOT_1 ? 30.0f : 30.0f)
 
 // Defender Goal Tracking PID
-#define DEFEND_GOAL_TRACK_KP (ROBOT_1 ? 0.3f : 0.3f) // high
+#define DEFEND_GOAL_TRACK_KP (ROBOT_1 ? 0.3f : 0.15f) // high
 #define DEFEND_GOAL_TRACK_KI (ROBOT_1 ? 0.0f : 0.0f)
 #define DEFEND_GOAL_TRACK_KD (ROBOT_1 ? 0.0075f : 0.0075f) // high D
 #define DEFEND_GOAL_TRACK_MAX (ROBOT_1 ? 0.0f : 0.0f)
@@ -95,8 +95,8 @@
 #define CAMERA_SERIAL Serial1
 #define CAMERA_PACKET_NUMBER 14
 #define CAMERA_START_BYTE 255
-#define CX (ROBOT_1 ? 240 : 240)
-#define CY (ROBOT_1 ? 190 : 200)
+#define CX (ROBOT_1 ? 235 : 240)
+#define CY (ROBOT_1 ? 200 : 200)
 
 // Bluetooth
 #define BLUETOOTH_SERIAL Serial5
